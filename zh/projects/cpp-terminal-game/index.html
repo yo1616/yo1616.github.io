@@ -1,1 +1,259 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="參與以臺大資管生活為主題的終端機迷宮遊戲，將學分、GPA、道具與關卡轉成互動規則。"><meta name="theme-color" content="#101F33"><title>YOUR LIFE IN NTU IM：C++ 終端機遊戲 | Patrick 蔡承佑</title><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../theme.css"><link rel="stylesheet" href="../../../style.css"><link rel="alternate" hreflang="en" href="../../../en/projects/cpp-terminal-game/"><script defer src="../../../app.js"></script></head><body><a class="skip" href="#main">跳至主要內容</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="../../">Patrick<span class="brand-dot" aria-hidden="true"></span><span class="brand-name">蔡承佑</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">選單 <span aria-hidden="true">☰</span></button><nav id="main-nav" aria-label="主要導覽"><a href="../../" >首頁</a><a href="../" aria-current="page">作品</a><a href="../../experience/" >經歷</a><a href="../../about/" >關於我</a><a href="../../contact/" >聯絡</a><a class="language" data-language href="../../../en/projects/cpp-terminal-game/" lang="en" aria-label="Switch to English">EN</a></nav></div></header><main id="main"><section class="wrap case-hero"><a class="text-link back" href="../">← 返回所有作品</a><p class="eyebrow">P08 / 團隊課程作品</p><h1>YOUR LIFE IN NTU IM：C++ 終端機遊戲</h1><p class="case-lead">參與以臺大資管生活為主題的終端機迷宮遊戲，將學分、GPA、道具與關卡轉成互動規則。</p><div class="case-facts"><div><span>我的角色</span><strong>程式設計課程團隊成員</strong></div><div><span>期間</span><strong>2024 Fall</strong></div></div><ul class="tags"><li>C++ 程式設計</li><li>遊戲邏輯</li><li>團隊開發</li></ul></section><div class="wrap case-cover "><img class="" src="../../../assets/ntu-terminal-game-cover.png" alt="YOUR LIFE IN NTU IM：終端機迷宮遊戲。" loading="eager" decoding="async"><p>YOUR LIFE IN NTU IM：終端機迷宮遊戲。</p></div><div class="wrap case-layout"><aside class="toc"><details open><summary>本頁內容</summary><nav aria-label="案例目錄"><a href="#section-0">作品</a><a href="#section-1">我的貢獻</a><a href="#gallery">圖片紀錄</a></nav></details></aside><div class="reading-panel"><section class="prose-section" id="section-0"><p class="eyebrow">01</p><h2>作品</h2><p>玩家透過鍵盤移動，在迷宮中收集學分與道具，並避開敵人。團隊以角色、物品與遊戲狀態等類別組織程式，處理關卡、碰撞與不同結局。簡報記錄了 Mac 與 Windows 輸入行為差異帶來的相容性問題。</p></section><section class="prose-section" id="section-1"><p class="eyebrow">02</p><h2>我的貢獻</h2><p>我是<strong>課程團隊成員</strong>；目前文件足以支持作品內容與團隊實作，但沒有清楚指出我負責哪些類別或模組，因此不將整個遊戲或所有物件導向設計歸為個人成果。未驗證公開可執行下載與現行作業系統支援。</p></section><section class="gallery-section" id="gallery"><p class="eyebrow">SELECTED EVIDENCE</p><h2>精選簡報與 Demo</h2><div class="gallery-grid"><figure><a data-gallery href="../../../assets/ntu-terminal-game-level.png" data-caption="公館商圈關卡的規則與終端機地圖。" aria-label="放大：公館商圈關卡的規則與終端機地圖。"><img class="" src="../../../assets/ntu-terminal-game-level.png" alt="公館商圈關卡的規則與終端機地圖。" loading="lazy" decoding="async"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>公館商圈關卡的規則與終端機地圖。</figcaption></figure><figure><a data-gallery href="../../../assets/ntu-terminal-game-items.png" data-caption="團隊遊戲中的物品類別與繼承設計。" aria-label="放大：團隊遊戲中的物品類別與繼承設計。"><img class="" src="../../../assets/ntu-terminal-game-items.png" alt="團隊遊戲中的物品類別與繼承設計。" loading="lazy" decoding="async"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>團隊遊戲中的物品類別與繼承設計。</figcaption></figure></div></section></div></div><section class="wrap next-case"><span class="eyebrow">下一個專案</span><a href="../challenge-points-proposal/">闖關積分平台：課程提案 <span aria-hidden="true">↗</span></a></section></main><footer class="site-footer wrap"><a class="brand" href="../../">Patrick<span class="brand-dot" aria-hidden="true"></span></a><p>© 2026 蔡承佑 Patrick。專案頁列明個人貢獻與團隊成果。</p><a href="https://github.com/yo1616">GitHub ↗</a><a href="mailto:cai7392@gmail.com">Email ↗</a><a href="#main">回到頂端 ↑</a></footer><dialog id="lightbox" aria-labelledby="lightbox-caption"><div class="lightbox-toolbar"><button data-prev aria-label="上一張">←</button><span id="lightbox-count" aria-live="polite"></span><button data-next aria-label="下一張">→</button><button data-close aria-label="關閉圖片">×</button></div><img id="lightbox-image" alt=""><p id="lightbox-caption"></p><a id="lightbox-original" target="_blank" rel="noopener">另開原圖（新視窗） ↗</a></dialog></body></html>
+
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="參與 C++ 終端機迷宮遊戲開發，以臺大資管生活為主題，實作道具相關功能並協助整理專案報告，累積物件導向程式設計與團隊開發經驗。">
+  <meta name="theme-color" content="#101F33">
+  <title>YOUR LIFE IN NTU IM：C++ 終端機遊戲 | Patrick 蔡承佑</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../theme.css">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="alternate" hreflang="en" href="../../../en/projects/cpp-terminal-game/">
+  <script defer src="../../../app.js"></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../../">
+        Patrick<span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">蔡承佑</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        選單 <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="main-nav" aria-label="主要導覽">
+        <a href="../../">首頁</a>
+        <a href="../" aria-current="page">作品</a>
+        <a href="../../experience/">經歷</a>
+        <a href="../../about/">關於我</a>
+        <a href="../../contact/">聯絡</a>
+        <a class="language" data-language href="../../../en/projects/cpp-terminal-game/" lang="en" aria-label="Switch to English">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap case-hero">
+      <a class="text-link back" href="../">← 返回所有作品</a>
+
+      <p class="eyebrow">P08 / C++ 程式設計與遊戲開發</p>
+
+      <h1>YOUR LIFE IN NTU IM：C++ 終端機遊戲</h1>
+
+      <p class="case-lead">
+        以臺大資管學生生活為靈感，與團隊運用 C++ 開發終端機互動迷宮遊戲，將學分、GPA、道具及校園場景轉化為遊戲機制。我主要參與<strong>道具相關程式實作與專案報告整理</strong>，透過實際開發理解物件導向設計、遊戲邏輯與團隊協作。
+      </p>
+
+      <div class="case-facts">
+        <div>
+          <span>我的角色</span>
+          <strong>C++ 道具功能實作與報告整理</strong>
+        </div>
+        <div>
+          <span>期間</span>
+          <strong>2024 Fall</strong>
+        </div>
+      </div>
+
+      <ul class="tags">
+        <li>C++ 程式設計</li>
+        <li>物件導向設計</li>
+        <li>遊戲邏輯與團隊開發</li>
+      </ul>
+    </section>
+
+    <div class="wrap case-cover">
+      <img
+        src="../../../assets/ntu-terminal-game-cover.png"
+        alt="YOUR LIFE IN NTU IM C++ 終端機迷宮遊戲封面"
+        loading="eager"
+        decoding="async"
+      >
+      <p>YOUR LIFE IN NTU IM｜C++ 終端機互動遊戲</p>
+    </div>
+
+    <div class="wrap case-layout">
+      <aside class="toc">
+        <details open>
+          <summary>本頁內容</summary>
+          <nav aria-label="案例目錄">
+            <a href="#section-0">專案概述</a>
+            <a href="#section-1">我的貢獻</a>
+            <a href="#section-2">程式設計與遊戲機制</a>
+            <a href="#section-3">專案成果</a>
+            <a href="#gallery">遊戲展示</a>
+          </nav>
+        </details>
+      </aside>
+
+      <div class="reading-panel">
+
+        <section class="prose-section" id="section-0">
+          <p class="eyebrow">01</p>
+          <h2>專案概述</h2>
+
+          <p>
+            <strong>YOUR LIFE IN NTU IM</strong> 是一款以臺大資訊管理學系學生生活為主題的 C++ 終端機迷宮遊戲。玩家透過鍵盤控制角色移動，在不同關卡中探索地圖、收集道具、取得學分，並避開敵人與障礙。
+          </p>
+
+          <p>
+            遊戲將<strong>學分、GPA、道具與關卡進度</strong>等校園生活元素轉化為互動規則，讓玩家在探索過程中面對不同的選擇與挑戰，並依照遊戲狀態觸發相應的結果。
+          </p>
+
+          <p>
+            團隊使用<strong>C++ 與物件導向程式設計</strong>組織角色、道具及遊戲狀態等功能，使不同遊戲元素能依照既定規則互動，逐步建立完整的終端機遊戲流程。
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-1">
+          <p class="eyebrow">02</p>
+          <h2>我的貢獻</h2>
+
+          <p>
+            在這項團隊專案中，我主要參與<strong>道具相關功能的 C++ 程式實作</strong>，協助將遊戲中的物品概念轉化為可執行的程式邏輯，讓道具能配合角色與遊戲狀態產生對應的互動。
+          </p>
+
+          <p>
+            開發過程中，我接觸到<strong>類別、物件與繼承等物件導向設計概念</strong>，並理解道具功能如何與角色屬性及遊戲規則相互配合。這使我不只練習 C++ 語法，也開始思考如何將功能拆分為較清楚的程式結構。
+          </p>
+
+          <p>
+            除了程式實作，我也參與<strong>專案書面報告的整理</strong>，協助說明遊戲設計、功能架構與實作內容，將團隊的開發成果轉化為具體且容易理解的技術說明。
+          </p>
+
+          <p>
+            透過與其他成員協作，我累積了<strong>模組分工、程式整合溝通與技術文件整理</strong>的經驗，也更理解團隊開發時維持功能一致性的重要性。
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-2">
+          <p class="eyebrow">03</p>
+          <h2>程式設計與遊戲機制</h2>
+
+          <p>
+            遊戲以<strong>終端機文字介面</strong>呈現地圖與角色位置，玩家透過鍵盤輸入控制行動。系統需要處理角色移動、地圖碰撞、道具互動、關卡進度及不同遊戲狀態之間的轉換。
+          </p>
+
+          <p>
+            在程式架構方面，團隊運用<strong>物件導向設計（Object-Oriented Programming）</strong>區分角色、物品與相關遊戲元素，使不同功能可以透過類別與既定規則進行管理。
+          </p>
+
+          <p>
+            道具系統是遊戲互動的重要部分。透過<strong>不同道具類型及其效果</strong>，玩家在探索地圖時能夠取得資源或改變部分遊戲狀態。我參與這部分的程式實作，也藉此理解如何將遊戲規則轉化為條件判斷與物件互動。
+          </p>
+
+          <p>
+            開發過程也遇到<strong>macOS 與 Windows 在鍵盤輸入處理上的相容性差異</strong>。這讓團隊在實作之外，必須考慮不同執行環境對終端機互動行為的影響。
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-3">
+          <p class="eyebrow">04</p>
+          <h2>專案成果</h2>
+
+          <p>
+            團隊完成以臺大資管生活為背景的<strong>C++ 終端機迷宮遊戲</strong>，整合角色移動、關卡探索、道具互動，以及學分與 GPA 等遊戲機制，並透過簡報與書面報告展示設計及實作內容。
+          </p>
+
+          <p>
+            對我而言，這項專案是將<strong>C++ 程式設計與物件導向概念應用到實際互動程式</strong>的重要經驗。從道具功能實作到團隊協作，我更熟悉如何將需求拆解為程式功能，並理解不同模組在完整系統中的關聯。
+          </p>
+
+          <p>
+            專案也讓我累積了<strong>程式邏輯設計、問題排查及技術文件表達</strong>的經驗，為後續系統開發與程式實作建立基礎。
+          </p>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+          <p class="eyebrow">SELECTED EVIDENCE</p>
+          <h2>遊戲介面與程式架構展示</h2>
+
+          <div class="gallery-grid">
+
+            <figure>
+              <a
+                data-gallery
+                href="../../../assets/ntu-terminal-game-level.png"
+                data-caption="遊戲關卡展示：以公館商圈為背景的終端機地圖，呈現角色移動、探索規則與迷宮互動。"
+                aria-label="放大：C++ 終端機遊戲關卡與迷宮地圖"
+              >
+                <img
+                  src="../../../assets/ntu-terminal-game-level.png"
+                  alt="C++ 終端機遊戲的公館商圈關卡與迷宮地圖"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="zoom-hint" aria-hidden="true">↗</span>
+              </a>
+              <figcaption>
+                遊戲關卡展示：以公館商圈為背景的終端機地圖，呈現角色移動、探索規則與迷宮互動。
+              </figcaption>
+            </figure>
+
+            <figure>
+              <a
+                data-gallery
+                href="../../../assets/ntu-terminal-game-items.png"
+                data-caption="物件導向設計：展示遊戲道具的類別與繼承架構，以及不同物品在程式中的組織方式。"
+                aria-label="放大：C++ 道具類別與繼承架構"
+              >
+                <img
+                  src="../../../assets/ntu-terminal-game-items.png"
+                  alt="C++ 遊戲道具類別與繼承設計示意圖"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="zoom-hint" aria-hidden="true">↗</span>
+              </a>
+              <figcaption>
+                物件導向設計：展示遊戲道具的類別與繼承架構，以及不同物品在程式中的組織方式。
+              </figcaption>
+            </figure>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <section class="wrap next-case">
+      <span class="eyebrow">下一個專案</span>
+      <a href="../challenge-points-proposal/">
+        闖關積分平台：課程提案
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="brand" href="../../">
+      Patrick<span class="brand-dot" aria-hidden="true"></span>
+    </a>
+    <p>© 2026 蔡承佑 Patrick。專案頁列明個人貢獻與團隊成果。</p>
+    <a href="https://github.com/yo1616">GitHub ↗</a>
+    <a href="mailto:cai7392@gmail.com">Email ↗</a>
+    <a href="#main">回到頂端 ↑</a>
+  </footer>
+
+  <dialog id="lightbox" aria-labelledby="lightbox-caption">
+    <div class="lightbox-toolbar">
+      <button data-prev aria-label="上一張">←</button>
+      <span id="lightbox-count" aria-live="polite"></span>
+      <button data-next aria-label="下一張">→</button>
+      <button data-close aria-label="關閉圖片">×</button>
+    </div>
+    <img id="lightbox-image" alt="">
+    <p id="lightbox-caption"></p>
+    <a id="lightbox-original" target="_blank" rel="noopener">
+      另開原圖（新視窗） ↗
+    </a>
+  </dialog>
+</body>
+</html>
