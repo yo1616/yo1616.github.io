@@ -64,3 +64,7 @@
 .competency-grid .text-link{margin-top:auto;align-self:flex-start;font-size:13px;gap:10px}
 @media(max-width:1100px){.competency-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.competency-grid{grid-template-columns:1fr;gap:24px}.competency-grid article+article{border-top:1px solid var(--border-muted-dark);padding-top:24px}.core-competencies{padding-block:32px}.core-competencies>h2{font-size:28px}}
+
+/* Keep every experience cover at the same width and ratio, including photos. */
+.experience-grid .work-visual,.experience-grid .work-visual.photo{position:relative;width:100%;aspect-ratio:16/10;max-height:none;flex:none;padding:18px;align-self:stretch}
+.experience-grid .work-visual img,.experience-grid .work-visual.photo img{position:absolute;inset:18px;width:calc(100% - 36px);height:calc(100% - 36px);object-fit:contain}
