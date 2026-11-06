@@ -1,1 +1,292 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="以商品名稱預測價格，並建立職缺－人才匹配分類流程；比較文字特徵、模型與判定門檻，說明預測表現和運算成本的取捨。"><meta name="theme-color" content="#101F33"><title>統計學習：文字分類與價格預測 | Patrick 蔡承佑</title><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../theme.css"><link rel="stylesheet" href="../../../style.css"><link rel="alternate" hreflang="en" href="../../../en/projects/statistical-learning/"><script defer src="../../../app.js"></script></head><body><a class="skip" href="#main">跳至主要內容</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="../../">Patrick<span class="brand-dot" aria-hidden="true"></span><span class="brand-name">蔡承佑</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">選單 <span aria-hidden="true">☰</span></button><nav id="main-nav" aria-label="主要導覽"><a href="../../" >首頁</a><a href="../" aria-current="page">作品</a><a href="../../experience/" >經歷</a><a href="../../about/" >關於我</a><a href="../../contact/" >聯絡</a><a class="language" data-language href="../../../en/projects/statistical-learning/" lang="en" aria-label="Switch to English">EN</a></nav></div></header><main id="main"><section class="wrap case-hero"><a class="text-link back" href="../">← 返回所有作品</a><p class="eyebrow">P02 / 兩項課程實作</p><h1>統計學習：文字分類與價格預測</h1><p class="case-lead">以商品名稱預測價格，並建立職缺－人才匹配分類流程；比較文字特徵、模型與判定門檻，說明預測表現和運算成本的取捨。</p><div class="case-facts"><div><span>我的角色</span><strong>模型實作與分析</strong></div><div><span>期間</span><strong>2025 Fall</strong></div></div><ul class="tags"><li>文字特徵工程</li><li>模型比較</li><li>驗證與評估</li></ul></section><div class="wrap case-cover "><img class="" src="../../../assets/statistical-learning-cover.png" alt="統計學習：文字分類與價格預測｜封面" loading="eager" decoding="async"><p>統計學習：文字分類與價格預測｜封面</p></div><div class="wrap case-layout"><aside class="toc"><details open><summary>本頁內容</summary><nav aria-label="案例目錄"><a href="#section-0">專案概述</a><a href="#section-1">職缺－人才匹配</a><a href="#section-2">商品名稱價格預測</a><a href="#gallery">圖片紀錄</a></nav></details></aside><div class="reading-panel"><section class="prose-section" id="section-0"><p class="eyebrow">01</p><h2>專案概述</h2><p>這兩項課程專案處理不同的文字預測問題。價格預測重點是文字正規化、長尾價格與運算限制；職缺匹配則結合文字和結構化資料，觀察類別不平衡、特徵與門檻如何影響 F1。</p></section><section class="prose-section" id="section-1"><p class="eyebrow">02</p><h2>職缺－人才匹配</h2><p>我將職缺與人才文字欄位轉成 <strong>TF-IDF 特徵</strong>，搭配類別編碼、缺值處理及技能匹配等手工特徵，再以 Logistic Regression 與 LightGBM 比較。流程包含正類權重調整與判定門檻搜尋，評估時同時檢視 Precision、Recall 和 F1。</p><p>報告記載，隨特徵與設定調整，驗證 F1 從約 0.29 提升至約 0.57。最終比較表中的 LightGBM F1 為 0.5696，Precision 為 0.5870，Recall 為 0.5531；Logistic Regression 的 F1 為 0.4592。這些是原報告的驗證結果，本次未重新訓練或確認跨資料集泛化。</p><p>訓練 F1 持續上升而驗證 F1 趨於平緩，提醒我不能只用訓練表現判斷模型品質。後續應保留獨立測試集、檢查資料洩漏，並清楚記錄門檻選擇的資料範圍。</p></section><section class="prose-section" id="section-2"><p class="eyebrow">03</p><h2>商品名稱價格預測</h2><p>我先統一商品名稱的全半形、大小寫與單位，再結合字元 n-gram、HashingVectorizer 和字串長度等數值特徵，以 Ridge Regression 預測價格。對目標價格使用 log 轉換，並以<strong>五折交叉驗證</strong>評估 SMAPE。</p><p>報告記錄 Hashing + Ridge 的平均 SMAPE 為 39.04（依報告呈現尺度）。模型選擇不只看誤差：文字特徵較複雜的替代方案耗時較長，因此最後保留較容易在課程運算限制內完成的流程。數值是該次資料與設定的結果，不代表任何商品類型都能達到相同表現。</p></section><section class="prose-section"><h2>分類模型比較</h2><div class="table-scroll" tabindex="0" role="region" aria-label="驗證結果表格"><table><caption>原報告最終驗證比較；非本次重新訓練結果。</caption><thead><tr><th>模型</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead><tbody><tr><th>LightGBM</th><td>0.5870</td><td>0.5531</td><td>0.5696</td></tr><tr><th>Logistic Regression</th><td>—</td><td>—</td><td>0.4592</td></tr></tbody></table></div></section><section class="gallery-section" id="gallery"><p class="eyebrow">SELECTED EVIDENCE</p><h2>精選簡報與 Demo</h2><div class="gallery-grid"><figure><a data-gallery href="../../../assets/job-matching-validation-curves.png" data-caption="LightGBM 訓練與驗證曲線；分類模型的表現紀錄。" aria-label="放大：LightGBM 訓練與驗證曲線；分類模型的表現紀錄。"><img class="" src="../../../assets/job-matching-validation-curves.png" alt="LightGBM 訓練與驗證曲線；分類模型的表現紀錄。" loading="lazy" decoding="async"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>LightGBM 訓練與驗證曲線；分類模型的表現紀錄。</figcaption></figure></div></section><section class="resources"><h2>專案資源</h2><a class="button secondary" href="https://github.com/yo1616/Statistical-Learning-Projects">查看 GitHub <span aria-hidden="true">↗</span></a></section></div></div><section class="wrap next-case"><span class="eyebrow">下一個專案</span><a href="../financial-asset-hedging/">金融資產避險能力實證分析 <span aria-hidden="true">↗</span></a></section></main><footer class="site-footer wrap"><a class="brand" href="../../">Patrick<span class="brand-dot" aria-hidden="true"></span></a><p>© 2026 蔡承佑 Patrick。專案頁列明個人貢獻與團隊成果。</p><a href="https://github.com/yo1616">GitHub ↗</a><a href="mailto:cai7392@gmail.com">Email ↗</a><a href="#main">回到頂端 ↑</a></footer><dialog id="lightbox" aria-labelledby="lightbox-caption"><div class="lightbox-toolbar"><button data-prev aria-label="上一張">←</button><span id="lightbox-count" aria-live="polite"></span><button data-next aria-label="下一張">→</button><button data-close aria-label="關閉圖片">×</button></div><img id="lightbox-image" alt=""><p id="lightbox-caption"></p><a id="lightbox-original" target="_blank" rel="noopener">另開原圖（新視窗） ↗</a></dialog></body></html>
+
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="運用 Python、文字特徵工程與機器學習模型，完成職缺與人才匹配分類及商品價格預測，透過 LightGBM、Logistic Regression、Ridge Regression 與交叉驗證比較模型表現。">
+  <meta name="theme-color" content="#101F33">
+  <title>統計學習：文字分類與價格預測 | Patrick 蔡承佑</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../theme.css">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="alternate" hreflang="en" href="../../../en/projects/statistical-learning/">
+  <script defer src="../../../app.js"></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../../">
+        Patrick<span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">蔡承佑</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        選單 <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="main-nav" aria-label="主要導覽">
+        <a href="../../">首頁</a>
+        <a href="../" aria-current="page">作品</a>
+        <a href="../../experience/">經歷</a>
+        <a href="../../about/">關於我</a>
+        <a href="../../contact/">聯絡</a>
+        <a class="language" data-language href="../../../en/projects/statistical-learning/" lang="en" aria-label="Switch to English">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap case-hero">
+      <a class="text-link back" href="../">← 返回所有作品</a>
+
+      <p class="eyebrow">P02 / 機器學習與資料分析</p>
+
+      <h1>統計學習：文字分類與價格預測</h1>
+
+      <p class="case-lead">
+        以 Python 完成兩項機器學習實作，分別針對職缺與人才匹配進行分類預測，以及根據商品名稱建立價格預測模型。透過文字特徵工程、模型訓練、超參數調整與交叉驗證，比較不同演算法的預測表現，並在模型效能與運算成本之間做出技術取捨。
+      </p>
+
+      <div class="case-facts">
+        <div>
+          <span>我的角色</span>
+          <strong>機器學習模型實作、特徵工程與效能分析</strong>
+        </div>
+        <div>
+          <span>期間</span>
+          <strong>2025 Fall</strong>
+        </div>
+      </div>
+
+      <ul class="tags">
+        <li>Python &amp; Scikit-learn</li>
+        <li>Feature Engineering</li>
+        <li>Model Training &amp; Evaluation</li>
+      </ul>
+    </section>
+
+    <div class="wrap case-cover">
+      <img
+        src="../../../assets/statistical-learning-cover.png"
+        alt="統計學習與機器學習模型訓練分析封面"
+        loading="eager"
+        decoding="async"
+      >
+      <p>統計學習｜模型訓練、驗證與效能比較</p>
+    </div>
+
+    <div class="wrap case-layout">
+      <aside class="toc">
+        <details open>
+          <summary>本頁內容</summary>
+          <nav aria-label="案例目錄">
+            <a href="#section-0">專案概述</a>
+            <a href="#section-1">職缺與人才匹配</a>
+            <a href="#section-2">商品價格預測</a>
+            <a href="#model-comparison">模型效能比較</a>
+            <a href="#gallery">訓練與驗證圖表</a>
+          </nav>
+        </details>
+      </aside>
+
+      <div class="reading-panel">
+
+        <section class="prose-section" id="section-0">
+          <p class="eyebrow">01</p>
+          <h2>專案概述</h2>
+
+          <p>
+            這兩項研究聚焦於<strong>如何將非結構化文字轉換為可供機器學習模型使用的特徵</strong>，並依據不同預測任務選擇適合的演算法與評估方式。
+          </p>
+
+          <p>
+            第一項專案為<strong>職缺與人才匹配分類</strong>，結合職缺描述、求職者技能及結構化資料，預測人才與職缺的匹配結果，並探討特徵工程、類別不平衡與分類門檻對 F1 Score 的影響。
+          </p>
+
+          <p>
+            第二項專案為<strong>商品名稱價格預測</strong>，從商品名稱提取文字與數值特徵，建立價格迴歸模型，並在運算時間與記憶體限制下，比較模型誤差與實作效率。
+          </p>
+
+          <p>
+            兩項實作涵蓋從<strong>資料前處理、特徵設計、模型訓練到驗證分析</strong>的機器學習流程，也讓我實際理解資料品質、特徵表示與模型選擇如何共同影響預測結果。
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-1">
+          <p class="eyebrow">02</p>
+          <h2>職缺與人才匹配分類</h2>
+
+          <p>
+            此專案的目標是根據職缺與求職者資料建立分類模型，判斷人才是否符合職缺需求。由於資料包含大量中文文字、類別欄位及數值資訊，我首先進行<strong>資料清理與特徵工程</strong>，將不同類型的資料轉換為模型可使用的輸入特徵。
+          </p>
+
+          <p>
+            在文字處理方面，我使用<strong>TF-IDF Vectorization</strong>提取職缺描述與人才資料中的文字特徵，搭配單詞與雙詞 n-gram，保留部分詞語組合資訊。同時使用 One-Hot Encoding 處理類別變數，並透過缺值填補與數值區間轉換，整理結構化資料。
+          </p>
+
+          <p>
+            除了基本文字特徵，我也實作<strong>技能匹配與自訂特徵</strong>，例如比較求職者技能與職缺要求，以及整理年齡、薪資等相關欄位，讓模型能使用更貼近實際匹配問題的資訊。
+          </p>
+
+          <p>
+            模型部分，我以<strong>Logistic Regression 作為基準模型，並使用 LightGBM 進行比較</strong>。針對正負類別不平衡的問題，我調整類別權重，並透過分類門檻搜尋，評估不同設定對 Precision、Recall 與 F1 Score 的影響。
+          </p>
+
+          <p>
+            隨著特徵工程與模型設定的調整，報告中的<strong>驗證 F1 Score 從約 0.29 提升至約 0.57</strong>。最終 LightGBM 的 F1 達到 <strong>0.5696</strong>，高於 Logistic Regression 的 0.4592，反映出模型選擇與特徵設計對這項分類任務的重要性。
+          </p>
+
+          <p>
+            我也透過<strong>Training / Validation Logloss 與 F1 曲線</strong>觀察模型訓練過程。結果顯示，訓練集 F1 持續上升，但驗證集 F1 逐漸趨於平緩，使我更重視模型的泛化表現，而不只是訓練資料上的分數。
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-2">
+          <p class="eyebrow">03</p>
+          <h2>商品名稱價格預測</h2>
+
+          <p>
+            第二項專案以<strong>商品名稱預測商品價格</strong>為目標。由於商品名稱可能混用中文、英文、不同計量單位與特殊符號，若直接輸入模型，容易產生不一致的文字特徵，因此我先建立文字正規化流程。
+          </p>
+
+          <p>
+            前處理包含<strong>全半形統一、英文大小寫轉換、計量單位標準化與特殊符號清理</strong>。在特徵工程方面，我使用 HashingVectorizer 建立字元層級的 n-gram 特徵，並加入字串長度、數字數量及英文字符數量等數值特徵。
+          </p>
+
+          <p>
+            模型採用<strong>HashingVectorizer + Ridge Regression</strong>，並透過目標價格的 log 轉換處理長尾分布，減少極端價格對模型的影響。驗證階段使用<strong>五折交叉驗證（5-Fold Cross-Validation）</strong>，以 SMAPE 評估價格預測誤差。
+          </p>
+
+          <p>
+            經過超參數比較，報告中選定的 Hashing + Ridge 模型，其<strong>平均 SMAPE 為 39.04</strong>。雖然部分 TF-IDF 替代模型在預測誤差方面具有優勢，但需要更長的訓練時間與較高運算資源，因此最終選擇在效能與計算成本之間較符合任務限制的模型。
+          </p>
+
+          <p>
+            這項實作讓我理解，<strong>模型選擇不只取決於預測指標，也必須考慮訓練時間、記憶體使用與推論限制</strong>。在實務應用中，建立可重複執行且符合資源限制的分析流程，同樣是重要的工程決策。
+          </p>
+        </section>
+
+        <section class="prose-section" id="model-comparison">
+          <h2>分類模型效能比較</h2>
+
+          <p>
+            以下為職缺與人才匹配專案的最終驗證結果。LightGBM 在 Precision、Recall 與 F1 Score 上均優於 Logistic Regression，並作為該次實驗的主要模型。
+          </p>
+
+          <div
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="職缺匹配分類模型驗證結果"
+          >
+            <table>
+              <caption>職缺與人才匹配模型最終驗證結果（原研究報告）</caption>
+              <thead>
+                <tr>
+                  <th>模型</th>
+                  <th>Precision</th>
+                  <th>Recall</th>
+                  <th>F1 Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>LightGBM</th>
+                  <td>0.5870</td>
+                  <td>0.5531</td>
+                  <td>0.5696</td>
+                </tr>
+                <tr>
+                  <th>Logistic Regression</th>
+                  <td>0.4090</td>
+                  <td>0.5240</td>
+                  <td>0.4592</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            這些結果顯示，在此資料集與特徵設定下，LightGBM 能取得較佳的 Precision 與 Recall 平衡。數值為原實驗報告中的驗證成績，並非獨立測試集或正式部署後的預測表現。
+          </p>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+          <p class="eyebrow">SELECTED EVIDENCE</p>
+          <h2>模型訓練與驗證分析</h2>
+
+          <div class="gallery-grid">
+            <figure>
+              <a
+                data-gallery
+                href="../../../assets/job-matching-validation-curves.png"
+                data-caption="LightGBM 訓練與驗證曲線：比較 Logloss 與 F1 Score 隨訓練輪數的變化，觀察模型收斂與泛化表現。"
+                aria-label="放大：LightGBM 模型訓練與驗證曲線"
+              >
+                <img
+                  src="../../../assets/job-matching-validation-curves.png"
+                  alt="LightGBM 模型訓練與驗證 Logloss、F1 Score 曲線"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="zoom-hint" aria-hidden="true">↗</span>
+              </a>
+
+              <figcaption>
+                LightGBM 訓練與驗證曲線：比較 Logloss 與 F1 Score 隨訓練輪數的變化，觀察模型收斂與泛化表現。
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="resources">
+          <h2>專案資源</h2>
+          <a
+            class="button secondary"
+            href="https://github.com/yo1616/Statistical-Learning-Projects"
+          >
+            查看 GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+
+      </div>
+    </div>
+
+    <section class="wrap next-case">
+      <span class="eyebrow">下一個專案</span>
+      <a href="../financial-asset-hedging/">
+        金融資產避險能力實證分析
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="brand" href="../../">
+      Patrick<span class="brand-dot" aria-hidden="true"></span>
+    </a>
+    <p>© 2026 蔡承佑 Patrick。專案頁列明個人貢獻與團隊成果。</p>
+    <a href="https://github.com/yo1616">GitHub ↗</a>
+    <a href="mailto:cai7392@gmail.com">Email ↗</a>
+    <a href="#main">回到頂端 ↑</a>
+  </footer>
+
+  <dialog id="lightbox" aria-labelledby="lightbox-caption">
+    <div class="lightbox-toolbar">
+      <button data-prev aria-label="上一張">←</button>
+      <span id="lightbox-count" aria-live="polite"></span>
+      <button data-next aria-label="下一張">→</button>
+      <button data-close aria-label="關閉圖片">×</button>
+    </div>
+    <img id="lightbox-image" alt="">
+    <p id="lightbox-caption"></p>
+    <a id="lightbox-original" target="_blank" rel="noopener">
+      另開原圖（新視窗） ↗
+    </a>
+  </dialog>
+</body>
+</html>
