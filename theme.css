@@ -1,0 +1,29 @@
+/* Change these three colors to recolor the whole interface. Recheck contrast after changes. */
+:root {
+  --color-navy: #101F33;
+  --color-cream: #F3F1EB;
+  --color-coral: #EB8077;
+  --surface-page: var(--color-navy);
+  --surface-card: color-mix(in srgb, var(--color-navy) 94%, var(--color-cream));
+  --surface-reading: var(--surface-card);
+  --text-on-dark: var(--color-cream);
+  --text-on-light: var(--color-navy);
+  --accent-decoration: var(--color-coral);
+  --border-core: var(--color-coral);
+  --tag-border: var(--color-coral);
+  --tag-background: color-mix(in srgb, var(--color-coral) 10%, var(--color-navy));
+  --tag-text: var(--color-cream);
+  --surface-tag-core: color-mix(in srgb, var(--color-coral) 10%, var(--color-cream));
+  --border-muted-dark: color-mix(in srgb, var(--color-cream) 24%, transparent);
+  --border-muted-light: color-mix(in srgb, var(--color-navy) 24%, transparent);
+  --button-primary-bg: var(--color-coral);
+  --button-primary-text: var(--color-navy);
+  --focus-on-dark: var(--color-cream);
+  --focus-on-light: var(--color-navy);
+  --shadow-card-color: var(--color-navy);
+  --shadow-card-opacity: 24%;
+  --shadow-card: 0 12px 32px color-mix(in srgb, var(--shadow-card-color) var(--shadow-card-opacity), transparent);
+  --accent-highlight-height: 30%;
+  --radius: 6px;
+  --content-width: 1160px;
+}
