@@ -1,1 +1,314 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="以 S&amp;P 500 為基準，比較黃金、美債 ETF、瑞士法郎及比特幣的報酬關係，使用相關分析與危機期間交互作用模型檢視避險特性。"><meta name="theme-color" content="#101F33"><title>金融資產避險能力實證分析 | Patrick 蔡承佑</title><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../theme.css"><link rel="stylesheet" href="../../../style.css"><link rel="alternate" hreflang="en" href="../../../en/projects/financial-asset-hedging/"><script defer src="../../../app.js"></script></head><body><a class="skip" href="#main">跳至主要內容</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="../../">Patrick<span class="brand-dot" aria-hidden="true"></span><span class="brand-name">蔡承佑</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">選單 <span aria-hidden="true">☰</span></button><nav id="main-nav" aria-label="主要導覽"><a href="../../" >首頁</a><a href="../" aria-current="page">作品</a><a href="../../experience/" >經歷</a><a href="../../about/" >關於我</a><a href="../../contact/" >聯絡</a><a class="language" data-language href="../../../en/projects/financial-asset-hedging/" lang="en" aria-label="Switch to English">EN</a></nav></div></header><main id="main"><section class="wrap case-hero"><a class="text-link back" href="../">← 返回所有作品</a><p class="eyebrow">P03 / 統計學團隊研究</p><h1>金融資產避險能力實證分析</h1><p class="case-lead">以 S&amp;P 500 為基準，比較黃金、美債 ETF、瑞士法郎及比特幣的報酬關係，使用相關分析與危機期間交互作用模型檢視避險特性。</p><div class="case-facts"><div><span>我的角色</span><strong>資料處理、統計分析與視覺化</strong></div><div><span>期間</span><strong>2025.09–2026.06</strong></div></div><ul class="tags"><li>金融資料處理</li><li>迴歸建模</li><li>假設檢定</li></ul></section><div class="wrap case-cover "><img class="" src="../../../assets/financial-asset-hedging-cover.png" alt="金融資產避險能力實證分析｜封面" loading="eager" decoding="async"><p>金融資產避險能力實證分析｜封面</p></div><div class="wrap case-layout"><aside class="toc"><details open><summary>本頁內容</summary><nav aria-label="案例目錄"><a href="#section-0">問題</a><a href="#section-1">我的貢獻</a><a href="#section-2">方法</a><a href="#section-3">結果</a><a href="#gallery">圖片紀錄</a></nav></details></aside><div class="reading-panel"><section class="prose-section" id="section-0"><p class="eyebrow">01</p><h2>問題</h2><p>資產在一般時期的低相關，不一定能延續到市場危機。我們研究四類資產與股票市場的歷史報酬關係，並檢驗 COVID 期間的線性關係是否改變。</p></section><section class="prose-section" id="section-1"><p class="eyebrow">02</p><h2>我的貢獻</h2><p>我參與金融資料蒐集與整理、報酬率計算、<strong>統計模型實作及視覺化</strong>。研究問題與結論由團隊共同討論；這個案例著重我把資料轉成可檢視分析流程的工作。</p></section><section class="prose-section" id="section-2"><p class="eyebrow">03</p><h2>方法</h2><p>先整理共同交易日期與日報酬率，觀察相關係數與散佈圖，再建立 OLS 模型。第二組模型加入 COVID 虛擬變數與市場報酬交互作用，區分平均位移與斜率變化。分析同時閱讀係數、p 值與 R²，而不是只看迴歸線方向。</p></section><section class="prose-section" id="section-3"><p class="eyebrow">04</p><h2>結果</h2><p>在課程報告的樣本設定下，美債 ETF 在四項資產中呈現最明顯的負向相關；比特幣則與股市呈正向相關。黃金的 COVID 交互作用項達統計顯著，瑞士法郎與市場的線性相關則接近零。這些結果顯示，資產關係需要連同市場期間與模型設定解讀。</p><p>報告採 2014–2024 年資料，並以 2020 年為 COVID 期間；repository 的樣本窗口與程式版本有所差異，尚未核對同版資料。本研究未驗證交易策略績效，歷史相關與迴歸不代表因果或未來避險保證。</p></section><p class="context-note">原圖 US10Y 為專案對 7–10 年期美債 ETF（IEF）的代稱，並非殖利率。</p><section class="gallery-section" id="gallery"><p class="eyebrow">SELECTED EVIDENCE</p><h2>精選簡報與 Demo</h2><div class="gallery-grid"><figure><a data-gallery href="../../../assets/financial-research-question.png" data-caption="研究對象、基準與樣本期間的定義。" aria-label="放大：研究對象、基準與樣本期間的定義。"><img class="" src="../../../assets/financial-research-question.png" alt="研究對象、基準與樣本期間的定義。" loading="lazy" decoding="async"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>研究對象、基準與樣本期間的定義。</figcaption></figure><figure><a data-gallery href="../../../assets/financial-interaction-model.png" data-caption="以虛擬變數與交互作用檢驗斜率變化。" aria-label="放大：以虛擬變數與交互作用檢驗斜率變化。"><img class="" src="../../../assets/financial-interaction-model.png" alt="以虛擬變數與交互作用檢驗斜率變化。" loading="lazy" decoding="async"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>以虛擬變數與交互作用檢驗斜率變化。</figcaption></figure><figure><a data-gallery href="../../../assets/financial-covid-return-comparison.png" data-caption="四類資產在 COVID 與非 COVID 期間的報酬關係。" aria-label="放大：四類資產在 COVID 與非 COVID 期間的報酬關係。"><img class="" src="../../../assets/financial-covid-return-comparison.png" alt="四類資產在 COVID 與非 COVID 期間的報酬關係。" loading="lazy" decoding="async"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>四類資產在 COVID 與非 COVID 期間的報酬關係。</figcaption></figure><figure><a data-gallery href="../../../assets/financial-interaction-results.png" data-caption="課程報告中的 COVID 交互作用結果。" aria-label="放大：課程報告中的 COVID 交互作用結果。"><img class="" src="../../../assets/financial-interaction-results.png" alt="課程報告中的 COVID 交互作用結果。" loading="lazy" decoding="async"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>課程報告中的 COVID 交互作用結果。</figcaption></figure></div></section><section class="resources"><h2>專案資源</h2><a class="button secondary" href="https://github.com/yo1616/Financial-Asset-Hedging-Analysis">查看 GitHub <span aria-hidden="true">↗</span></a></section></div></div><section class="wrap next-case"><span class="eyebrow">下一個專案</span><a href="../transit-hci-research/">多模式交通規劃：HCI 使用者研究 <span aria-hidden="true">↗</span></a></section></main><footer class="site-footer wrap"><a class="brand" href="../../">Patrick<span class="brand-dot" aria-hidden="true"></span></a><p>© 2026 蔡承佑 Patrick。專案頁列明個人貢獻與團隊成果。</p><a href="https://github.com/yo1616">GitHub ↗</a><a href="mailto:cai7392@gmail.com">Email ↗</a><a href="#main">回到頂端 ↑</a></footer><dialog id="lightbox" aria-labelledby="lightbox-caption"><div class="lightbox-toolbar"><button data-prev aria-label="上一張">←</button><span id="lightbox-count" aria-live="polite"></span><button data-next aria-label="下一張">→</button><button data-close aria-label="關閉圖片">×</button></div><img id="lightbox-image" alt=""><p id="lightbox-caption"></p><a id="lightbox-original" target="_blank" rel="noopener">另開原圖（新視窗） ↗</a></dialog></body></html>
+
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="運用 Python 進行金融資料蒐集、處理、統計建模與視覺化，分析黃金、美債 ETF、瑞士法郎及比特幣相對於 S&P 500 的避險特性。">
+  <meta name="theme-color" content="#101F33">
+  <title>金融資產避險能力實證分析 | Patrick 蔡承佑</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../theme.css">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="alternate" hreflang="en" href="../../../en/projects/financial-asset-hedging/">
+  <script defer src="../../../app.js"></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../../">
+        Patrick<span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">蔡承佑</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        選單 <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="main-nav" aria-label="主要導覽">
+        <a href="../../">首頁</a>
+        <a href="../" aria-current="page">作品</a>
+        <a href="../../experience/">經歷</a>
+        <a href="../../about/">關於我</a>
+        <a href="../../contact/">聯絡</a>
+        <a class="language" data-language href="../../../en/projects/financial-asset-hedging/" lang="en" aria-label="Switch to English">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap case-hero">
+      <a class="text-link back" href="../">← 返回所有作品</a>
+
+      <p class="eyebrow">P03 / 金融數據與統計分析</p>
+      <h1>金融資產避險能力實證分析</h1>
+
+      <p class="case-lead">
+        以 S&amp;P 500 為市場基準，運用 Python 分析黃金、美國公債 ETF、瑞士法郎與比特幣的歷史報酬關係，結合相關分析、OLS 迴歸及 COVID 期間交互作用模型，探討不同金融資產在一般市場與危機期間的避險特性。我主要負責金融資料處理、統計模型程式實作與研究結果視覺化。
+      </p>
+
+      <div class="case-facts">
+        <div>
+          <span>我的角色</span>
+          <strong>資料處理、統計建模與視覺化</strong>
+        </div>
+        <div>
+          <span>期間</span>
+          <strong>2025.09–2026.06</strong>
+        </div>
+      </div>
+
+      <ul class="tags">
+        <li>Python 資料分析</li>
+        <li>OLS 迴歸建模</li>
+        <li>金融資料視覺化</li>
+      </ul>
+    </section>
+
+    <div class="wrap case-cover">
+      <img
+        src="../../../assets/financial-asset-hedging-cover.png"
+        alt="金融資產避險能力實證分析封面"
+        loading="eager"
+        decoding="async"
+      >
+      <p>金融資產避險能力實證分析｜金融資料與迴歸分析</p>
+    </div>
+
+    <div class="wrap case-layout">
+      <aside class="toc">
+        <details open>
+          <summary>本頁內容</summary>
+          <nav aria-label="案例目錄">
+            <a href="#section-0">研究背景</a>
+            <a href="#section-1">我的貢獻</a>
+            <a href="#section-2">分析方法</a>
+            <a href="#section-3">研究結果</a>
+            <a href="#gallery">圖表與分析展示</a>
+          </nav>
+        </details>
+      </aside>
+
+      <div class="reading-panel">
+
+        <section class="prose-section" id="section-0">
+          <p class="eyebrow">01</p>
+          <h2>研究背景</h2>
+
+          <p>
+            在投資組合管理中，避險資產的價值不只取決於平時與股票市場的相關程度，更重要的是當市場出現劇烈波動時，這些資產是否仍能提供風險分散效果。某些資產在一般市場環境下與股市呈現低相關，但在金融危機期間，其報酬關係可能發生明顯變化。
+          </p>
+
+          <p>
+            因此，我們以 <strong>S&amp;P 500 作為股票市場基準</strong>，選取<strong>黃金、美國公債 ETF（IEF）、瑞士法郎與比特幣</strong>作為比較對象，分析四類資產與股市的歷史報酬關係，並進一步檢驗 COVID 期間的市場變化是否影響其避險特性。
+          </p>
+
+          <p>
+            本研究的核心問題是：<strong>哪些資產在股市波動時呈現較低或負向的報酬關係？這些關係在危機期間是否有所改變？</strong>
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-1">
+          <p class="eyebrow">02</p>
+          <h2>我的貢獻</h2>
+
+          <p>
+            在這項團隊研究中，我主要負責<strong>使用 Python 蒐集與整理金融市場資料</strong>，包括取得不同資產的歷史價格、處理時間序列資料，以及計算後續統計分析所需的報酬率。
+          </p>
+
+          <p>
+            在分析階段，我參與<strong>相關分析、OLS 迴歸與 COVID 交互作用模型的程式實作</strong>，協助將研究假設轉化為可執行的統計分析流程，並整理模型輸出以供團隊討論與解讀。
+          </p>
+
+          <p>
+            我也負責<strong>資料視覺化與圖表製作</strong>，透過散佈圖、迴歸趨勢線與統計結果比較，呈現不同資產在一般期間與 COVID 期間的報酬關係，讓研究發現能以更直觀的方式呈現。
+          </p>
+
+          <p>
+            透過實際撰寫分析程式與製作研究圖表，我累積了從<strong>金融資料取得、資料處理、模型分析到成果呈現</strong>的實作經驗。
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-2">
+          <p class="eyebrow">03</p>
+          <h2>分析方法</h2>
+
+          <p>
+            研究首先整理不同金融資產的歷史價格資料，對齊共同交易日期並計算日報酬率，再以<strong>相關係數與散佈圖</strong>觀察各資產和 S&amp;P 500 之間的線性關係。
+          </p>
+
+          <p>
+            接著建立<strong>普通最小平方法（Ordinary Least Squares, OLS）迴歸模型</strong>，以股票市場報酬解釋各資產報酬的線性變動，並透過迴歸係數、統計顯著性與模型解釋力，評估不同資產與市場的關聯程度。
+          </p>
+
+          <p>
+            為了進一步比較危機前後的差異，我們在模型中加入<strong>COVID 虛擬變數及市場報酬交互作用項</strong>，檢驗危機期間的報酬水準與市場敏感度是否出現變化。
+          </p>
+
+          <p>
+            分析主要使用 <strong>Python、pandas、statsmodels 與金融市場資料擷取工具</strong>，並結合資料視覺化呈現模型結果。研究判讀不只觀察迴歸線方向，也同時考慮估計係數、p 值與 R²。
+          </p>
+        </section>
+
+        <section class="prose-section" id="section-3">
+          <p class="eyebrow">04</p>
+          <h2>研究結果</h2>
+
+          <p>
+            在研究採用的樣本與模型設定下，<strong>美國公債 ETF 在四類資產中呈現相對明顯的負向相關</strong>，而<strong>比特幣與股票市場呈正向相關</strong>，顯示比特幣在該樣本期間不具備穩定的股市反向避險特性。
+          </p>
+
+          <p>
+            交互作用模型的分析顯示，<strong>黃金在 COVID 期間的市場敏感度變化具有統計顯著性</strong>；瑞士法郎與股市的整體線性相關則接近零。這些結果反映出不同資產的避險特性可能隨市場環境而改變，不能僅以單一期間的相關係數判斷。
+          </p>
+
+          <p>
+            這項研究讓我更理解如何運用<strong>統計建模與資料分析方法研究金融市場問題</strong>，也培養了根據實際資料、模型假設與統計結果進行解讀的能力。
+          </p>
+
+          <p>
+            研究結果屬於特定歷史樣本與模型設定下的實證觀察，並非經過交易策略回測的投資績效，也不代表未來市場中必然具有相同的避險效果。
+          </p>
+        </section>
+
+        <p class="context-note">
+          圖表中的 US10Y 為專案對美國 7–10 年期公債 ETF（IEF）的標示，並非美國十年期公債殖利率。
+        </p>
+
+        <section class="gallery-section" id="gallery">
+          <p class="eyebrow">SELECTED EVIDENCE</p>
+          <h2>金融資料分析與研究圖表</h2>
+
+          <div class="gallery-grid">
+
+            <figure>
+              <a
+                data-gallery
+                href="../../../assets/financial-research-question.png"
+                data-caption="研究設計：以 S&P 500 為基準，比較四類金融資產的避險特性與研究期間。"
+                aria-label="放大：金融資產避險研究設計"
+              >
+                <img
+                  src="../../../assets/financial-research-question.png"
+                  alt="研究對象、S&P 500 市場基準與樣本期間"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="zoom-hint" aria-hidden="true">↗</span>
+              </a>
+              <figcaption>
+                研究設計：以 S&amp;P 500 為基準，比較四類金融資產的避險特性與研究期間。
+              </figcaption>
+            </figure>
+
+            <figure>
+              <a
+                data-gallery
+                href="../../../assets/financial-interaction-model.png"
+                data-caption="統計模型：透過 OLS 迴歸、COVID 虛擬變數與交互作用項分析市場敏感度變化。"
+                aria-label="放大：OLS 迴歸與 COVID 交互作用模型"
+              >
+                <img
+                  src="../../../assets/financial-interaction-model.png"
+                  alt="OLS 迴歸與 COVID 交互作用模型的研究設計"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="zoom-hint" aria-hidden="true">↗</span>
+              </a>
+              <figcaption>
+                統計模型：透過 OLS 迴歸、COVID 虛擬變數與交互作用項分析市場敏感度變化。
+              </figcaption>
+            </figure>
+
+            <figure>
+              <a
+                data-gallery
+                href="../../../assets/financial-covid-return-comparison.png"
+                data-caption="報酬關係比較：使用散佈圖與迴歸趨勢線，呈現黃金、美債 ETF、瑞士法郎與比特幣在不同市場期間的報酬關係。"
+                aria-label="放大：四類資產在 COVID 與非 COVID 期間的報酬比較"
+              >
+                <img
+                  src="../../../assets/financial-covid-return-comparison.png"
+                  alt="四類金融資產在 COVID 與非 COVID 期間的報酬散佈圖"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="zoom-hint" aria-hidden="true">↗</span>
+              </a>
+              <figcaption>
+                報酬關係比較：使用散佈圖與迴歸趨勢線，呈現黃金、美債 ETF、瑞士法郎與比特幣在不同市場期間的報酬關係。
+              </figcaption>
+            </figure>
+
+            <figure>
+              <a
+                data-gallery
+                href="../../../assets/financial-interaction-results.png"
+                data-caption="模型結果：比較各資產的估計係數與 COVID 交互作用結果，觀察不同市場環境下的關聯變化。"
+                aria-label="放大：金融資產 COVID 交互作用模型結果"
+              >
+                <img
+                  src="../../../assets/financial-interaction-results.png"
+                  alt="金融資產避險能力研究的 COVID 交互作用模型結果"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="zoom-hint" aria-hidden="true">↗</span>
+              </a>
+              <figcaption>
+                模型結果：比較各資產的估計係數與 COVID 交互作用結果，觀察不同市場環境下的關聯變化。
+              </figcaption>
+            </figure>
+
+          </div>
+        </section>
+
+        <section class="resources">
+          <h2>專案資源</h2>
+          <a
+            class="button secondary"
+            href="https://github.com/yo1616/Financial-Asset-Hedging-Analysis"
+          >
+            查看 GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+
+      </div>
+    </div>
+
+    <section class="wrap next-case">
+      <span class="eyebrow">下一個專案</span>
+      <a href="../transit-hci-research/">
+        多模式交通規劃：HCI 使用者研究
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="brand" href="../../">
+      Patrick<span class="brand-dot" aria-hidden="true"></span>
+    </a>
+    <p>© 2026 蔡承佑 Patrick。專案頁列明個人貢獻與團隊成果。</p>
+    <a href="https://github.com/yo1616">GitHub ↗</a>
+    <a href="mailto:cai7392@gmail.com">Email ↗</a>
+    <a href="#main">回到頂端 ↑</a>
+  </footer>
+
+  <dialog id="lightbox" aria-labelledby="lightbox-caption">
+    <div class="lightbox-toolbar">
+      <button data-prev aria-label="上一張">←</button>
+      <span id="lightbox-count" aria-live="polite"></span>
+      <button data-next aria-label="下一張">→</button>
+      <button data-close aria-label="關閉圖片">×</button>
+    </div>
+    <img id="lightbox-image" alt="">
+    <p id="lightbox-caption"></p>
+    <a id="lightbox-original" target="_blank" rel="noopener">
+      另開原圖（新視窗） ↗
+    </a>
+  </dialog>
+</body>
+</html>
