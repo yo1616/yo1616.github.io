@@ -68,10 +68,12 @@
 /* Keep every experience cover at the same width and ratio, including photos. */
 .experience-grid .work-visual,.experience-grid .work-visual.photo{position:relative;width:100%;aspect-ratio:16/10;max-height:none;flex:none;padding:18px;align-self:stretch}
 .experience-grid .work-visual img,.experience-grid .work-visual.photo img{position:absolute;inset:18px;width:calc(100% - 36px);height:calc(100% - 36px);object-fit:contain}
+
+
 /* Homepage portrait size */
 .hero-portrait {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -79,23 +81,17 @@
 .hero-portrait img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  height: auto;
 }
 
 /* Mobile portrait size */
 @media (max-width: 760px) {
   .hero-portrait {
-    width: 70%;
-    max-width: 240px;
+    width: 78%;
+    max-width: 270px;
     margin-inline: auto;
   }
-}
-
-.about-portrait {
-  width: 100%;
-  max-width: 260px;
-  margin-inline: auto;
 }
 
